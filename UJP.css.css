@@ -1,0 +1,317 @@
+<!-- styles.css -->
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #004aad;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f4f4f4;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-bar input, .filter-bar input {
+    padding: 0.5rem;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button, .filter-bar button, .apply-btn, .cta-btn {
+    padding: 0.5rem 1rem;
+    background: #004aad;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover, .filter-bar button:hover, .apply-btn:hover, .cta-btn:hover {
+    background: #003366;
+}
+
+.categories {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.categories h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: #004aad;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    background: #003366;
+}
+
+.job-filter {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    flex_WRAP: wrap;
+}
+
+.filter-bar input {
+    min-width: 150px;
+}
+
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.job-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.job-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-card p {
+    margin-bottom: 0.5rem;
+}
+
+.employer-info {
+    padding: 2rem 1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.employer-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.employer-info ul {
+    list-style: disc;
+    text-align: left;
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.contact-form {
+    padding: 2rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+footer {
+    background: #004aad;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-bar, .filter-bar {
+        flex-direction: column;
+    }
+}
+
+/* Logo styling */
+.logo img {
+    height: 250px; /* Adjust based on your logo's dimensions */
+    width: auto;
+    display: block;
+}
+
+/* Adjust nav layout for logo */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ensure nav links align nicely */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px; /* Slightly smaller on mobile */
+    }
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+<!-- script.js -->
+async function fetchJobs() {
+    try {
+        const response = await fetch('http://localhost:3000/jobs');
+        const jobs = await response.json();
+        displayJobs(jobs);
+    } catch (error) {
+        console.error('Error fetching jobs:', error);
+    }
+}
+
+function displayJobs(jobs) {
+    const jobListings = document.getElementById('job-listings');
+    jobListings.innerHTML = '';
+    jobs.forEach(job => {
+        const jobCard = document.createElement('div');
+        jobCard.className = 'job-card';
+        jobCard.innerHTML = `
+            <h3>${job.title}</h3>
+            <p><strong>Company:</strong> ${job.company}</p>
+            <p><strong>Location:</strong> ${job.location}</p>
+            <p><strong>Type:</strong> ${job.type}</p>
+            <button class="apply-btn">Apply Now</button>
+        `;
+        jobListings.appendChild(jobCard);
+    });
+}
+
+function filterJobs() {
+    const company = document.getElementById('company-filter').value.toLowerCase();
+    const category = document.getElementById('category-filter').value.toLowerCase();
+    const location = document.getElementById('location-filter').value.toLowerCase();
+
+    fetchJobs().then(() => {
+        const jobCards = document.querySelectorAll('.job-card');
+        jobCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const companyText = card.querySelector('p:nth-child(2)').textContent.toLowerCase();
+            const locationText = card.querySelector('p:nth-child(3)').textContent.toLowerCase();
+
+            const matches = (!company || companyText.includes(company)) &&
+                           (!category || title.includes(category)) &&
+                           (!location || locationText.includes(location));
+
+            card.style.display = matches ? 'block' : 'none';
+        });
+    });
+}
